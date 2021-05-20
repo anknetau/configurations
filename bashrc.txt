@@ -1,0 +1,3 @@
+alias cdfun='cd /c/Users/ank/dev'
+alias g=git
+alias ts='tig status'

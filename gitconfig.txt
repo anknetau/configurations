@@ -1,14 +1,11 @@
 [user]
-	name = Andres Kievsky
-	email = andres.kievsky@gmail.com
+	name = FIRSTNAME LASTNAME
+	email = EMAIL@SOMEWHERE.NET
 [core]
-	excludesfile = /Users/akievsky/.gitignore_global
+	# excludesfile = /Users/SOMEBODY/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-# [mergetool "sourcetree"]
-	# cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	# trustExitCode = true
 [alias]
     l = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     p = pull --ff-only

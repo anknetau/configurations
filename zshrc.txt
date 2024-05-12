@@ -1,0 +1,19 @@
+alias g=git
+alias ts='tig status'
+alias gitpushsetupstream='git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`'
+
+tohalfjpg() {
+    FILE=$1
+    width=$(sips -g pixelWidth $FILE | awk '/pixelWidth:/{print $2}')
+    height=$(sips -g pixelHeight $FILE | awk '/pixelHeight:/{print $2}')
+    new_width=$(echo "$width / 2" | bc)
+    new_height=$(echo "$height / 2" | bc)
+    echo "${width} x ${height} -> ${new_width} x ${new_height}"
+    sips --resampleWidth $new_width -s format jpeg $FILE --out ${FILE:r}@0.5x.jpg
+}
+
+archiveimg() {
+    sips -s format heic --setProperty formatOptions high $1 --out ${1:r}.heic
+}
+
+# for A in *.JPG; do echo $A; archiveimg $A; done

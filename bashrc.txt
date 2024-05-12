@@ -1,5 +1,0 @@
-alias cdfun='cd /c/Users/ank/dev'
-alias g=git
-alias ts='tig status'
-alias gitpushsetupstream='git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`'
-alias viwork='vim ~/.gitconfig ~/.ssh/config'

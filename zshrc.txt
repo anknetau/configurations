@@ -30,7 +30,7 @@ prefixdate() {
 
 # for A in *.JPG; do echo $A; archiveimg $A; done
 
-# export EDITOR=code
+# export EDITOR="code -w"
 export EDITOR=vim
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1

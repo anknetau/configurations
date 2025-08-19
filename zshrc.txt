@@ -1,6 +1,9 @@
 alias g=git
 alias ts='tig status'
 alias gitpushsetupstream='git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`'
+alias a=asdf
+
+ZSH_THEME="maran"
 
 tohalfjpg() {
     FILE=$1
@@ -16,4 +19,30 @@ archiveimg() {
     sips -s format heic --setProperty formatOptions high $1 --out ${1:r}.heic
 }
 
+alias 2d="date '+%Y-%m-%d'"
+alias 2dc='2d | pbcopy'
+prefixdate() {
+    FILE=$1
+    new_name="$(date +%Y-%m-%d) - $1"
+    echo $new_name
+    mv "$1" "$new_name"
+}
+
 # for A in *.JPG; do echo $A; archiveimg $A; done
+
+# export EDITOR=code
+export EDITOR=vim
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+source <(fzf --zsh)
+eval "$(zoxide init zsh)"
+alias zq='zoxide query'
+alias za='zoxide add'
+alias zr='zoxide remove'
+alias mc='SHELL=bash mc'
+
+# export FZF_CTRL_T_OPTS="--preview='bat {}' --height=100% --bind shift-up:preview-page-up,shift-down:preview-page-down --bind='F3:toggle-preview'"
+# export FZF_DEFAULT_OPTS="--preview='bat --color=always {}' --bind='F3:toggle-preview'"
+export FZF_CTRL_T_OPTS="--preview='bat --color=always {}' --bind='F3:toggle-preview'"
+alias editghostty="$EDITOR '/Users/ank/Library/Application Support/com.mitchellh.ghostty/config'"
+

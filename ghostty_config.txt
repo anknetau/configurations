@@ -1,11 +1,17 @@
 # Config options with defaults: `ghostty +show_config --default --docs`
 # https://ghostty.org/docs/config
 
-theme = Pro
+theme = "Apple System Colors"
+# theme = "Pro"
 cursor-color = #FF0000
 cursor-style = block
 
-shell-integration-features = no-cursor,no-sudo,title
-macos-titlebar-style = tabs
+# font-family = "Monaco"
+font-family = "Hack Nerd Font Mono"
+font-style = Regular
 
+macos-option-as-alt = left
+
+shell-integration-features = no-cursor,no-sudo,title
+macos-titlebar-style = transparent
 

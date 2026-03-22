@@ -46,3 +46,9 @@ alias mc='SHELL=bash mc'
 export FZF_CTRL_T_OPTS="--preview='bat --color=always {}' --bind='F3:toggle-preview'"
 alias editghostty="$EDITOR '/Users/ank/Library/Application Support/com.mitchellh.ghostty/config'"
 
+# Fix the command-left/right
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
+# Cargo is friend. Cargo is life. -- ank
+export PATH="$PATH:/Users/ank/.cargo/bin"

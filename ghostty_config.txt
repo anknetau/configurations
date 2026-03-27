@@ -15,3 +15,12 @@ macos-option-as-alt = left
 shell-integration-features = no-cursor,no-sudo,title
 macos-titlebar-style = transparent
 
+keybind = alt+left=text:\x1b[1;3D
+keybind = alt+right=text:\x1b[1;3C
+
+keybind = super+ctrl+arrow_up=unbind
+keybind = super+ctrl+arrow_down=unbind
+keybind = super+ctrl+arrow_left=unbind
+keybind = super+ctrl+arrow_right=unbind
+
+# custom-shader = shaders/cursor_tail.glsl
